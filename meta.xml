@@ -1,0 +1,12 @@
+<meta>
+  <name>Plesk Bulk DNS</name>
+  <version>1.0</version>
+  <description>Extensão para edição em massa de registros DNS no Plesk</description>
+  <vendor>Felipe Almeman</vendor>
+  <id>plesk-bulk-dns</id>
+  <min-panel-version>18.0</min-panel-version>
+  <extensions>
+    <base>dns</base>
+  </extensions>
+  <repository>https://github.com/seu-usuario/plesk-bulk-dns</repository>
+</meta>
