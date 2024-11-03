@@ -1,4 +1,33 @@
-<h1>Editar Registros DNS em Massa</h1>
-<form method="post" action="scripts/massEditHandler.php">
-    <!-- Conteúdo da tabela de edição em massa -->
-</form>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Edição em Massa de DNS</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <h1>Editar Registros DNS em Massa</h1>
+    <form method="post" action="../scripts/massEditHandler.php">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Conteúdo</th>
+                    <th>TTL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Exemplo de linha editável; em uma implementação real, essas linhas devem ser geradas dinamicamente -->
+                <tr>
+                    <td><input type="text" name="name[]" value="example.com"></td>
+                    <td><input type="text" name="type[]" value="A"></td>
+                    <td><input type="text" name="content[]" value="192.168.1.1"></td>
+                    <td><input type="text" name="ttl[]" value="3600"></td>
+                </tr>
+                <!-- Adicionar mais registros conforme necessário -->
+            </tbody>
+        </table>
+        <button type="submit">Salvar Alterações</button>
+    </form>
+</body>
+</html>
