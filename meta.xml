@@ -1,12 +1,14 @@
 <meta>
+  <id>plesk-bulk-dns</id>
   <name>Plesk Bulk DNS</name>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
+  <release>1</release>
   <description>Extensão para edição em massa de registros DNS no Plesk</description>
   <vendor>Felipe Almeman</vendor>
-  <id>plesk-bulk-dns</id>
   <min-panel-version>18.0</min-panel-version>
   <extensions>
     <base>dns</base>
   </extensions>
   <repository>https://github.com/seu-usuario/plesk-bulk-dns</repository>
+   <url>https://aireset.com.br</url>
 </meta>

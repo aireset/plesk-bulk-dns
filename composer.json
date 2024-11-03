@@ -1,0 +1,5 @@
+{
+    "require": {
+        "plesk/pm-api-stubs": "^18.0"
+    }
+}
