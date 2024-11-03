@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Edição em Massa de DNS</title>
+    <title>Edição Completa de Registros DNS em Massa</title>
     <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
@@ -17,14 +17,14 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Exemplo de linha editável; em uma implementação real, essas linhas devem ser geradas dinamicamente -->
-                <tr>
-                    <td><input type="text" name="name[]" value="example.com"></td>
-                    <td><input type="text" name="type[]" value="A"></td>
-                    <td><input type="text" name="content[]" value="192.168.1.1"></td>
-                    <td><input type="text" name="ttl[]" value="3600"></td>
-                </tr>
-                <!-- Adicionar mais registros conforme necessário -->
+                <?php foreach ($dnsRecords as $record): ?>
+                    <tr>
+                        <td><input type="text" name="name[]" value="<?= htmlspecialchars($record['name']) ?>"></td>
+                        <td><input type="text" name="type[]" value="<?= htmlspecialchars($record['type']) ?>"></td>
+                        <td><input type="text" name="content[]" value="<?= htmlspecialchars($record['content']) ?>"></td>
+                        <td><input type="text" name="ttl[]" value="<?= htmlspecialchars($record['ttl']) ?>"></td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
         <button type="submit">Salvar Alterações</button>
